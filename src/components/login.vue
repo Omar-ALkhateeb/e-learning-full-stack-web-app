@@ -3,7 +3,13 @@
     <v-app id="inspire">
       <v-content>
         <div class="text-xs-center">
-          <v-progress-circular v-if="loading" :size="70" :width="7" color="primary" indeterminate></v-progress-circular>
+          <v-progress-circular
+            v-if="loading"
+            :size="70"
+            :width="7"
+            color="green lighten-1"
+            indeterminate
+          ></v-progress-circular>
         </div>
         <div v-if="!loading">
           <v-layout align-center justify-center>
@@ -15,7 +21,11 @@
                 </v-toolbar>
                 <v-card-text>
                   <v-form ref="form" v-model="valid" lazy-validation>
-                    <v-alert :value="alert" color="error" icon="new_releases">wrong info.</v-alert>
+                    <v-alert
+                      :value="alert"
+                      color="error"
+                      icon="new_releases"
+                    >wrong info or bad connection.</v-alert>
                     <v-text-field
                       prepend-icon="person"
                       v-model="name"

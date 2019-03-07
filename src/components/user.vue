@@ -4,7 +4,13 @@
       <v-container>
         <v-alert :value="alert" color="error" icon="new_releases">no posts found</v-alert>
         <div class="text-xs-center">
-          <v-progress-circular v-if="loading" :size="70" :width="7" color="primary" indeterminate></v-progress-circular>
+          <v-progress-circular
+            v-if="loading"
+            :size="70"
+            :width="7"
+            color="green lighten-1"
+            indeterminate
+          ></v-progress-circular>
         </div>
         <div v-if="!loading">
           <v-layout align-space-between justify-start column>
@@ -22,7 +28,7 @@
 
                   <!-- <v-list-tile-sub-title v-html="item.author"></v-list-tile-sub-title> -->
                 </v-list-tile-content>
-                <v-btn :href="item.Dlink" small flat color="info">Download</v-btn>
+                <v-btn :href="item.Dlink" small flat color="green lighten-1">Download</v-btn>
               </v-list-tile>
             </v-list>
           </v-layout>

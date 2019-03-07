@@ -3,7 +3,13 @@
     <v-app id="inspire">
       <v-content>
         <div class="text-xs-center">
-          <v-progress-circular v-if="loading" :size="70" :width="7" color="primary" indeterminate></v-progress-circular>
+          <v-progress-circular
+            v-if="loading"
+            :size="70"
+            :width="7"
+            color="green lighten-1"
+            indeterminate
+          ></v-progress-circular>
         </div>
         <div v-if="!loading">
           <v-layout align-center justify-center>
